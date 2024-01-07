@@ -37,7 +37,6 @@ function OffcanvasExample() {
                   <Nav.Link href="./InformationsPratiques">Informations</Nav.Link>
                   <Nav.Link href="./ReseauxSociaux">Réseaux Sociaux</Nav.Link>
                   <Nav.Link href="./Partenaires">Partenaires</Nav.Link>
-                  <Nav.Link href="./Geolocalisation">Géolocalisation</Nav.Link>
                   <Nav.Link href="./Faq">FAQ</Nav.Link>
                   
                   <NavDropdown

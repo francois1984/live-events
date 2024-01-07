@@ -1,19 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import '../styles.css';
+import '../styles.css'; // Assurez-vous d'importer votre fichier CSS avec les styles personnalisés
 
 const Carte = () => {
   const [pleinEcran, setPleinEcran] = useState(false);
+  const [geoLocation, setGeoLocation] = useState(null);
+  const [error, setError] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState(null);
 
   const pointsInteret = [
-    { lat: 51.505, lng: -0.09, nom: 'Point 1' },
-    { lat: 51.515, lng: -0.1, nom: 'Point 2' },
-    // Ajoute d'autres points d'intérêt au besoin
+    { id: 1, lat: 43.6045, lng: 1.44, nom: 'Point 1', image: './images/gsdl.png' },
+    { id: 2, lat: 43.6053, lng: 1.43, nom: 'Point 2', image: './images/gsdlTrans.ico' },
+    // Ajoutez d'autres points d'intérêt au besoin
   ];
 
-  const togglePleinEcran = () => {
-    setPleinEcran(!pleinEcran);
+  useEffect(() => {
+    const getLocation = () => {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setGeoLocation({ latitude, longitude });
+        },
+        (error) => {
+          setError(`Erreur de géolocalisation : ${error.message}`);
+        }
+      );
+    };
+
+    getLocation();
+  }, []);
+
+
+  const handleMapClick = () => {
+    // Réinitialiser le point sélectionné lors d'un clic sur la carte
+    setSelectedPoint(null);
+  };
+
+  const handlePointClick = (point) => {
+    setSelectedPoint(point);
   };
 
   return (
@@ -26,18 +51,35 @@ const Carte = () => {
       </p>
       <div className="carte-container">
         <MapContainer
-          center={[51.505, -0.09]}
-          zoom={13}
+          center={selectedPoint ? [selectedPoint.lat, selectedPoint.lng] : (geoLocation ? [geoLocation.latitude, geoLocation.longitude] : [43.6047, 1.4442])}
+          zoom={8}
           className={`carte ${pleinEcran ? 'plein-ecran' : ''}`}
-          onClick={togglePleinEcran}
+          onClick={handleMapClick}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='© OpenStreetMap contributors' />
-          {pointsInteret.map((point, index) => (
-            <Marker key={index} position={[point.lat, point.lng]}>
+
+          {pointsInteret.map((point) => (
+            <Marker key={point.id} position={[point.lat, point.lng]} onClick={() => handlePointClick(point)}>
               <Popup>{point.nom}</Popup>
             </Marker>
           ))}
+
+          {geoLocation && (
+            <Marker position={[geoLocation.latitude, geoLocation.longitude]}>
+              <Popup>Ma position</Popup>
+            </Marker>
+          )}
         </MapContainer>
+      </div>
+      <div className="points-images">
+        {pointsInteret.map((point) => (
+          <img
+            key={point.id}
+            src={process.env.PUBLIC_URL + point.image}
+            alt={point.nom}
+            onClick={() => handlePointClick(point)}
+          />
+        ))}
       </div>
     </div>
   );

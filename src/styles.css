@@ -108,6 +108,52 @@ p{
 }
 
 
+.buttonBillet {
+  font-size: 50px;
+  font-weight: 800;
+  width: 100%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.281) 2px 2px 2px 2px;
+}
+
+
+.custom-marker {
+  width: 30px; /* ajustez la taille selon vos besoins */
+  height: 30px;
+}
+
+/* Images carte */
+
+.points-images {
+  display: flex;
+  justify-content:center;
+  margin-top: 10px;
+}
+
+.points-images img {
+  width: 50px; /* Ajustez la largeur selon vos besoins */
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.points-images img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
 
 
 

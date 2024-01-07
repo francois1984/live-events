@@ -9,7 +9,6 @@ import InformationsPratiques from './components/InformationsPratiques';
 import Billetterie from './components/Billetterie';
 import ReseauxSociaux from './components/ReseauxSociaux';
 import Partenaires from './components/Partenaires';
-import Geolocalisation from './components/Geolocalisation';
 import Faq from './components/Faq';
 import './App.css';
 
@@ -28,7 +27,6 @@ const App = () => {
   <Route path="/reseauxsociaux" element={<ReseauxSociaux />} />
   <Route path="/" element={<Accueil />} />
   <Route path="/partenaires" element={<Partenaires />} />
-  <Route path="/geolocalisation" element={<Geolocalisation />} />
   <Route path="/faq" element={<Faq />} />
   </Routes>
   </div>

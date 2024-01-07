@@ -1,5 +1,6 @@
 import React from 'react';
 import Carte from './Carte';
+import { Link } from 'react-router-dom';
 
 const Accueil = () => {
  return (
@@ -46,8 +47,17 @@ suivez-nous sur les réseaux sociaux pour ne rien manquer !
  </div>
 {/* =========== fin de la section concerts============== */}
 
+{/* Zone Billetterie */}
+<div>
+        <Link to="/billetterie">
+          <button className='buttonBillet'>BILLETTERIE</button>
+        </Link>
+      </div>
+{/* ================= */}
+
+{/* Carte interactive */}
 <Carte />
- 
+ {/* ============== */}
 
  {/* ========== Section Progammation =========== */}
  <div >
