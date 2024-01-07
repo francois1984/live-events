@@ -1,5 +1,6 @@
 import React from 'react';
 import Carte from './Carte';
+import Programmation from './Programmation';
 import { Link } from 'react-router-dom';
 
 const Accueil = () => {
@@ -59,16 +60,9 @@ suivez-nous sur les réseaux sociaux pour ne rien manquer !
 <Carte />
  {/* ============== */}
 
- {/* ========== Section Progammation =========== */}
- <div >
- <h1 className="mt-4 mb-3 mt-5 p-5">Programmation</h1>
- <p>
- Découvrez les incroyables artistes qui se produiront lors du Festival Live 
-Events. Consultez les horaires, les lieux et ne manquez pas vos performances 
-préférées.
- </p>
- <img className='imgProgrammation' src="./images/mookok2.png" alt="Logo MOOKOK 1981" />
- </div>
+{/* section programmation */}
+ <Programmation />
+{/* ====================== */}
  </div>
  
 

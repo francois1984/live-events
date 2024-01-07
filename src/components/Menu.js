@@ -39,7 +39,7 @@ function OffcanvasExample() {
                   <Nav.Link href="./Partenaires">Partenaires</Nav.Link>
                   <Nav.Link href="./Faq">FAQ</Nav.Link>
                   
-                  <NavDropdown
+                  {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -51,7 +51,7 @@ function OffcanvasExample() {
                     <NavDropdown.Item href="#action8">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
