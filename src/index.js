@@ -1,4 +1,5 @@
 import React from 'react';
+import { createRoot } from 'react-dom/client';
 // import ReactDOM from 'react-dom/client';
 import './index.css';
 
@@ -7,10 +8,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'; // Importez votre fichier CSS personnalisé
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const root = createRoot(document.getElementById('root'));
+root.render
+(
   <React.StrictMode>
     <App />
   </React.StrictMode>

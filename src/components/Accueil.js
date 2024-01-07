@@ -1,4 +1,6 @@
 import React from 'react';
+import Carte from './Carte';
+
 const Accueil = () => {
  return (
 // =========== Section Accueil ================ //
@@ -42,6 +44,9 @@ suivez-nous sur les réseaux sociaux pour ne rien manquer !
  </h2>
  </div>
  </div>
+{/* =========== fin de la section concerts============== */}
+
+<Carte />
  
 
  {/* ========== Section Progammation =========== */}
