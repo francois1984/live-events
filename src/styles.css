@@ -8,7 +8,7 @@ p{
   text-align: justify;
 }
 .menu {
-  position: fixed;
+  margin: 20PX;
 }
 
 .list-group-item {
@@ -81,8 +81,12 @@ p{
 
 .imgProgrammation{
   width: 50%;
+
 }
 
+.imgConcerts{
+  width: 50%;
+}
 
 
 
@@ -94,7 +98,14 @@ p{
 
 /* Style pour les écrans de petite taille (par exemple, smartphones) */
 @media (max-width: 767px) {
+
+  .imgProgrammation{
+    width: 50%;
+  }
   
+  .imgConcerts{
+    width: 50%;
+  }
 }
 
 /* Style pour les écrans de taille moyenne (par exemple, tablettes) */
@@ -108,4 +119,5 @@ p{
     text-align: center;
     margin: 300px;
   }
+  
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -15,8 +14,8 @@ function OffcanvasExample() {
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 menu">
           <Container fluid>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-          <Navbar.Brand href="./Accueil" className="mx-auto logo">
-              Live Events
+          <Navbar.Brand href="./" className="mx-auto logo">
+              <h1>LIVE EVENTS</h1>
             </Navbar.Brand>
             {/* <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand> */}
             <Navbar.Offcanvas
@@ -26,12 +25,11 @@ function OffcanvasExample() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Live Events
+                <Nav.Link href="./">LIVE EVENTS</Nav.Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="./Accueil">Accueil</Nav.Link>
                   <Nav.Link href="./Programmation">Programmation</Nav.Link>
                   <Nav.Link href="./Concerts">Concerts</Nav.Link>
                   <Nav.Link href="./Carte">Carte</Nav.Link>
@@ -76,35 +74,3 @@ function OffcanvasExample() {
 
 export default OffcanvasExample;
 
-// const Menu = () => {
-//  return (
-//  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//  <Link className="navbar-brand" to="/">Live Events</Link>
-//  <div className="collapse navbar-collapse" id="navbarNav">
-//  <ul className="navbar-nav">
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/">Accueil</Link>
-//  </li>
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/programmation">Programmation</Link>
-//  </li>
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/carte">Carte</Link>
-//  </li>
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/informations-pratiques">Informations 
-// Pratiques</Link>
-//  </li>
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/billetterie">Billetterie</Link>
-//  </li>
-//  <li className="nav-item">
-//  <Link className="nav-link" to="/reseaux-sociaux">Réseaux 
-// Sociaux</Link>
-//  </li>
-//  </ul>
-//  </div>
-//  </nav>
-//  );
-// };
-// export default Menu;

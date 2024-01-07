@@ -10,7 +10,7 @@ const Programmation = () => {
 Events. Consultez les horaires, les lieux et ne manquez pas vos performances 
 préférées.
  </p>
- <img src="./images/mookok2.png" alt="Logo MOOKOK 1981" />
+ <img className='imgProgrammation' src="./images/mookok2.png" alt="Logo MOOKOK 1981" />
  </div>
  );
 };
