@@ -1,0 +1,111 @@
+/* Ajoutez vos styles personnalisés ici */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+p{
+  text-align: justify;
+}
+.menu {
+  position: fixed;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.list-group-item:hover {
+  background-color: #d6d8db;
+}
+
+/* Styles communs pour tous les composants */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles spécifiques pour chaque composant */
+.informations-container,
+.programmation-container,
+.concerts-container,
+.accueil-container {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: large;
+}
+
+.listConcerts {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.281) 2px 2px 2px 2px;
+}
+
+
+.imgAccueil {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.listText {
+  font-size: 20px;
+  font-weight: 600;
+  width: 50%;
+}
+
+.listConcerts:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.listConcerts:active {
+  background-color: #ccc;
+}
+
+
+.imgProgrammation{
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Style pour les écrans de petite taille (par exemple, smartphones) */
+@media (max-width: 767px) {
+  
+}
+
+/* Style pour les écrans de taille moyenne (par exemple, tablettes) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+/* Style pour les écrans de grande taille (par exemple, ordinateurs de bureau) */
+@media (min-width: 1024px) {
+  p{
+    text-align: center;
+    margin: 300px;
+  }
+}
