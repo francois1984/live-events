@@ -10,8 +10,8 @@ const Carte = () => {
   const [selectedPoint, setSelectedPoint] = useState(null);
 
   const pointsInteret = [
-    { id: 1, lat: 43.6045, lng: 1.44, nom: 'Point 1', image: './images/gsdl.png' },
-    { id: 2, lat: 43.6053, lng: 1.43, nom: 'Point 2', image: './images/gsdlTrans.ico' },
+    { id: 1, lat: 43.6045, lng: 1.44, nom: 'Point 1', image: './images/mookok2.png' },
+    { id: 2, lat: 43.6053, lng: 1.43, nom: 'Point 2', image: './images/mookok4.png' },
     // Ajoutez d'autres points d'intérêt au besoin
   ];
 
